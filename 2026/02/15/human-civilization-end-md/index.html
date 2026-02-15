@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>人类的终结 | Animus's Blog</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/pwa/favicon.png"><link rel="stylesheet" href="/css/index.css?v=3.0.21"><link rel="canonical" href="http://example.com/2026/02/15/human-civilization-end-md/index.html"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- Feature-specific CSS--><!-- aplayer--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><!-- fancybox ui--><!-- katex--><!-- Open Graph--><meta name="description" content="人类文明会以什么方式灭亡？这是我一直以来忍不住思考的问题——尽管我知道我的思考根本不可能给出回答——也没有人能够给出回答。我控制不住无意义的思考，于是记录下我的想法。 人类文明难以永存我也曾问过别人的看法。朋友说：说不定人类文明不会灭亡，而是一直发展下去。 我以为不然，至少按照当今人类普遍认可的知识"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="Animus's Blog"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.png"><link rel="apple-touch-icon" href="/img/pwa/favicon.png" sizes="180x180"><script>console.log(' %c Solitude %c ' + '3.0.21' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2023-04-20 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可"},
+    aside: {
+        state: {
+            morning: "✨ 早上好，新的一天开始了",
+            noon: "🍲 午餐时间",
+            afternoon: "🌞 下午好",
+            night: "早点休息",
+            goodnight: "晚安 😴",
+        },
+        witty_words: [],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: false,
+    lightbox: 'null',
+    right_menu: false,
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: false,
+    expire: false,
+};</script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: false,
+    ai_text: false,
+    color: false,
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body id="body"><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fas fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="item"><a href="/archives/2026/02/"><span class="date">2026/02</span><div class="count-group"><span class="count">2</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/"><span class="date">全部文章</span><div class="count-group"><span class="count">2</span><span class="unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fas fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><span class="music-switch" title="音乐开关"><i class="solitude fas fa-compact-disc"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a href="/" title="返回博客主页" id="site-name"><span class="title">Solitude</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">人类的终结</a></div></div><div id="menus"></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude fas fa-arrow-up"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><div class="tag_share"><div class="post-meta__tag-list"></div></div></div></div><h1 class="post-title">人类的终结</h1><div id="post-meta"><div class="meta-secondline"></div></div></div><div class="post-radius-bottom"></div><article class="post-content article-container"><p>人类文明会以什么方式灭亡？这是我一直以来忍不住思考的问题——尽管我知道我的思考根本不可能给出回答——也没有人能够给出回答。我控制不住无意义的思考，于是记录下我的想法。</p>
+<h2 id="人类文明难以永存"><a href="#人类文明难以永存" class="headerlink" title="人类文明难以永存"></a>人类文明难以永存</h2><p>我也曾问过别人的看法。朋友说：说不定人类文明不会灭亡，而是一直发展下去。</p>
+<p>我以为不然，至少按照当今人类普遍认可的知识来推理不然。首先，宇宙应该也有终结的时刻（按照现有的物理学），那么区区人类文明怎么可能永续发展？不论是大冻结、大撕裂、大挤压、大反弹或是其它的宇宙死亡方式，宇宙有其寿命，那么置身宇宙中的人类文明的寿命不可能超过宇宙的寿命。其次，还有科学家估算过质子的寿命，大约是10^38年。我不知道这个数量相对于宇宙的寿命有没有意义，假如有，那么人类文明的寿命也必然不可能超过这个数字——按照“人类不可能精确操作原子级别的物质”的理论来看正是如此。此外，太阳的寿命只剩下50亿年，如果在这个年限以内人类未能逃出地球或是研究出抵御红巨星的手段，人类就不可能扛下去。不过50亿年终究还是过于久远，我更倾向于相信人类会在更短的时间内灭亡。相比于宇宙的漫长，人类文明从诞生到现在可以算是一个瞬间。永远不要低估世界之广，永远不要低估人类之弱。</p>
+<p>有人说：光锥之外皆是命运，光锥之内皆是虚无。我对这句话暂且不置可否，不过光速的枷锁的确存在。相对于宇宙的尺度，一切智慧生命的行为都不过是以小于光速的速度缓慢蠕动的蛆。Sol-3的这条蛆又能活到什么时候呢？物理学家弗兰克·德雷克认为有与外太空通信能力的技术文明最有可能的存续时间是一万年，有与外太空通信能力的技术文明寿命的上限是一亿年。物理学家	约翰·理查德·戈特认为人类有95%的几率在780万年之内灭绝。看来学者们对人类的命运也并不抱有长久的乐观。</p>
+<h2 id="人类文明何以终结"><a href="#人类文明何以终结" class="headerlink" title="人类文明何以终结"></a>人类文明何以终结</h2><p>关于人类灭亡方式的看法有很多，不妨按照现有的人类知识，罗列一下我们比较熟悉、可能性比较大的几种可能性。</p>
+<h3 id="自然因素带来的大规模伤害"><a href="#自然因素带来的大规模伤害" class="headerlink" title="自然因素带来的大规模伤害"></a>自然因素带来的大规模伤害</h3><h4 id="星体撞击地球"><a href="#星体撞击地球" class="headerlink" title="星体撞击地球"></a>星体撞击地球</h4><p>包括小行星和彗星。体积不大的星体撞击地球即可导致毁灭一切的冲击。</p>
+<h4 id="宇宙射线辐射"><a href="#宇宙射线辐射" class="headerlink" title="宇宙射线辐射"></a>宇宙射线辐射</h4><p>如超新星爆发、伽马射线暴，或是极强的太阳风。</p>
+<h4 id="超级火山爆发"><a href="#超级火山爆发" class="headerlink" title="超级火山爆发"></a>超级火山爆发</h4><p>火山爆发可能引起全球气候变化，如“火山冬天”，进而导致人类灭绝。</p>
+<h4 id="极端气象灾害"><a href="#极端气象灾害" class="headerlink" title="极端气象灾害"></a>极端气象灾害</h4><p>极端高温或低温，如大冰期等。</p>
+<h4 id="自然界原生病原导致的传染病大流行"><a href="#自然界原生病原导致的传染病大流行" class="headerlink" title="自然界原生病原导致的传染病大流行"></a>自然界原生病原导致的传染病大流行</h4><p>像SARS、COVID-19等病原体导致了大规模流行病，未来可能出现更具威胁的病原体，正如《瘟疫公司》那样。</p>
+<h3 id="人为因素带来的大规模伤害"><a href="#人为因素带来的大规模伤害" class="headerlink" title="人为因素带来的大规模伤害"></a>人为因素带来的大规模伤害</h3><h4 id="不使用核武器的战争、暴乱"><a href="#不使用核武器的战争、暴乱" class="headerlink" title="不使用核武器的战争、暴乱"></a>不使用核武器的战争、暴乱</h4><p>战争末期极有可能使用核武器，但不排除不使用核武器依然造成人类毁灭的可能性。</p>
+<h4 id="核战争和核武器导致的其它灾害"><a href="#核战争和核武器导致的其它灾害" class="headerlink" title="核战争和核武器导致的其它灾害"></a>核战争和核武器导致的其它灾害</h4><p>核爆炸和核辐射直接毁灭人类，或是核战争导致“核冬天”进而毁灭人类，抑或是核战争导致社会秩序彻底崩溃、剩余的人类无法组织新的人类社会。</p>
+<h4 id="生物武器使用、实验室病原体泄露导致的传染病大流行"><a href="#生物武器使用、实验室病原体泄露导致的传染病大流行" class="headerlink" title="生物武器使用、实验室病原体泄露导致的传染病大流行"></a>生物武器使用、实验室病原体泄露导致的传染病大流行</h4><p>阴谋论者认为COVID-19是实验室泄露的病原体，也有人说它是美国制造的生物武器。生物武器和实验室病原体泄露确实有可能导致人类灭绝。</p>
+<h4 id="极端环境破坏"><a href="#极端环境破坏" class="headerlink" title="极端环境破坏"></a>极端环境破坏</h4><p>环境破坏导致全球变暖，水污染、空气污染、土壤污染导致生物多样性丧失、人类生存环境日益恶劣。</p>
+<h4 id="资源极度短缺"><a href="#资源极度短缺" class="headerlink" title="资源极度短缺"></a>资源极度短缺</h4><p>能源枯竭、水资源枯竭、粮食短缺等，可能导致人类无法生存。</p>
+<h4 id="人为灭绝人类"><a href="#人为灭绝人类" class="headerlink" title="人为灭绝人类"></a>人为灭绝人类</h4><p>有人实施阴谋，系统性地灭绝了全部人类。</p>
+<h3 id="其它高等智慧带来的大规模伤害"><a href="#其它高等智慧带来的大规模伤害" class="headerlink" title="其它高等智慧带来的大规模伤害"></a>其它高等智慧带来的大规模伤害</h3><h4 id="人工智能反抗人类"><a href="#人工智能反抗人类" class="headerlink" title="人工智能反抗人类"></a>人工智能反抗人类</h4><p>人工智能发展到了足够高的程度，拥有了自我意识，希望反抗并消灭人类。</p>
+<h4 id="外星人入侵地球"><a href="#外星人入侵地球" class="headerlink" title="外星人入侵地球"></a>外星人入侵地球</h4><p>外星文明可能拥有比人类更强大的科技，人类无法抵挡外星文明的入侵。</p>
+<h3 id="人类文明自然衰亡"><a href="#人类文明自然衰亡" class="headerlink" title="人类文明自然衰亡"></a>人类文明自然衰亡</h3><p>自然衰亡，实际上是人类自己选择了让文明死亡，而不是存在一些无法战胜的外在因素。在我看来这才是最有可能的结局——这就是属于人类的“25号宇宙”。</p>
+<p>25号宇宙，是美国行为学家约翰·卡尔宏进行的一项动物社会行为研究。卡尔宏为老鼠们提供了一个环境适宜、资源无穷无尽、空间有限的乌托邦，在这里老鼠没有生存压力，可以任意生存繁殖。</p>
+<p>实验开始的前314天，老鼠不断繁殖，形成了井然有序的阶级社会。315天，种群数量达到峰值2200只，增长突然停滞。在接下来这一阶段，老鼠们出现了以下行为特征：</p>
+<ul>
+<li>暴力行为频发<ul>
+<li>随机暴力行为：老鼠之间频繁发生无缘无故的暴力冲突，包括成年雄鼠对其他雄鼠、雌鼠或幼鼠的攻击。原本的领地防御行为演变为混乱的混战。</li>
+<li>攻击幼年老鼠：成年老鼠（尤其是雄鼠）开始主动攻击新生幼鼠，导致幼鼠存活率急剧下降。有些幼鼠被咬伤或直接杀死。</li>
+<li>雌鼠虐待后代：母鼠的母性本能退化，她们经常遗弃、忽视或甚至攻击自己的幼崽。有些母鼠会将幼鼠拖到公共区域，任其自生自灭。</li>
+<li>同类相残倾向：出现食幼现象（cannibalism），成年老鼠偶尔吃掉死去的或受伤的幼鼠。</li>
+</ul>
+</li>
+<li>社会秩序混乱<ul>
+<li>社会等级混乱：原本的等级制度瓦解，低阶雄鼠开始挑战高阶个体，但往往以失败告终，形成恶性循环。</li>
+<li>过度拥挤区现象：中心区域成为“高密度区”，老鼠堆积在一起，活动空间压缩，导致正常行为（如觅食和休息）被干扰。</li>
+</ul>
+</li>
+<li>出现“美丽鼠”<ul>
+<li>完全社交退缩：一群年轻雄鼠（通常是后期出生者）彻底退出社会竞争，不参与争斗、交配或领地争夺。只专注于基本生存：吃、喝、睡。</li>
+<li>过度梳理行为：这些老鼠花费大量时间梳理毛发，导致皮肤光滑、无疤痕（故名“美丽鼠”）。这是一种强迫性行为，类似于人类的“自闭”或“躺平”。</li>
+<li>对繁殖无兴趣：尽管生理健康，它们完全丧失交配欲，甚至忽略雌鼠的求偶信号，导致种群繁殖率进一步下降。</li>
+<li>隔离生活：它们往往聚集在高处或边缘巢穴，避免与其他老鼠互动，形成一种“隐士”群体。</li>
+</ul>
+</li>
+<li>繁殖行为异化<ul>
+<li>同性行为增加：雄鼠之间出现异常的同性交配行为，这被视为社会压力下的应激反应，而不是正常繁殖。</li>
+<li>繁殖率急剧下降：成年老鼠的交配频率减少，即使交配成功，受孕率和出生率也大幅降低。到阶段末尾，新生幼鼠几乎为零。</li>
+<li>母性行为丧失：雌鼠不再筑巢或保护幼鼠。有些雌鼠在分娩后立即遗弃幼崽，或在哺乳期中断喂养。</li>
+</ul>
+</li>
+<li>行为模式改变<ul>
+<li>活动模式紊乱：正常昼夜节律被打破，老鼠在不适当的时间过度活跃或无精打采。</li>
+<li>性别角色模糊：雌鼠有时表现出雄性化的攻击行为，而雄鼠则变得被动。</li>
+</ul>
+</li>
+</ul>
+<p>以上的一系列行为特征最终导致这个老鼠乌托邦在600天诞生了最后一只小鼠，在1780天完全灭绝。卡尔宏把这种现象称为“行为沉沦”（Behavioral Sink）：当社会角色饱和、空间拥挤导致过度竞争与压力时，复杂社会行为崩溃，最终走向种群灭绝。即使物质条件如同天堂，心理与社会层面的“拥挤”也能毁灭一切。不过卡尔宏当时应该不会想到，他的实验记录正如同预言了使徒降临的死海文书，出现在老鼠社会中的现象正一条条在人类社会中应验。空间过度拥挤、同性行为激增、繁殖率不断降低、雌性攻击性异常变强、雄性攻击性异常减弱、昼夜节律改变、雄性中出现“美丽”的个体，像啊，实在是太像了。我第一次看到这个实验的记录时的惊叹感，大概和余秋雨第一次见到金字塔时是一样的吧。</p>
+<p>诚然人类社会与老鼠大不相同，从严谨的学术视角来看并不能直接把老鼠的结论套用到人身上，不过这不妨碍我们就这个实验认真反思，更何况我并不是行为学和人类学的专业人才。或许人类未来的社会状态与这些老鼠有本质不同，或许将来的人类可以用自己的智慧和勇气渡过难关，但当下的反思并没有坏处。我忍不住想：性少数运动（LGBTQIAPKDXREW+）、女性主义运动，以及其他一些在年轻一代中常见的现象，或许正是人类行为沉沦的社会表现？这一系列致力于实现平等和自由的努力，是否反倒加速了人类的灭亡？如果是，那么我们应该保护他们的权益、尽管可能会毁灭人类，还是为了人类的存续而对他们进行全然不公正的猎巫式审判？抱着正确死去——还是承受错误生存？这又是一个电车难题式的道德两难。想到这里，不禁又一次感到悲哀。</p>
+<p>还是暂且放下这个问题吧，毕竟老鼠世界的规则并不是人类社会的铁律，或许未来的人们根本不需要面对这种问题，而是有一个显而易见且两全其美的解决方案呢？——就算是，这种罪恶也不需要我来承担，因为我大概活不到那个年代。</p>
+<h2 id="终结的那一天"><a href="#终结的那一天" class="headerlink" title="终结的那一天"></a>终结的那一天</h2><p>人类总是希望自己能够在有限的生命里，给世界留下永不磨灭的痕迹，成为自身存在的证明。于是人们向宇宙中播放了包含许多信息的无线电“唱片”，希望地外文明能听到人类的声音；于是人们建造了斯瓦尔巴全球种子库，封存了地球上的生物多样性；于是人们在北极地球档案馆里记录下无数历史资料和Github开源代码，希望有朝一日后来者能够以此记住我们的存在。每当读到这些事迹就有一种感动的心情，看到那以千年、万年、亿年计数的漫长时间跨度，顿时感到人活一世竟是如此空虚，一切功名利禄仿佛都没有了意义——这尘世的种种都被跨越无尽时间的终极浪漫所冲淡。</p>
+<blockquote>
+<p>每览昔人兴感之由，若合一契，未尝不临文嗟悼，不能喻之于怀。<br>固知一死生为虚诞，齐彭殇为妄作。<br>后之视今，亦犹今之视昔。<br>悲夫！故列叙时人，录其所述，虽世殊事异，所以兴怀，其致一也。<br>后之览者，亦将有感于斯文。</p>
+</blockquote>
+<p>今天坐在电脑桌前的我尚且如此，难以想象最后一个人类在弥留之际会有怎样的感受。自己短暂的生命即将终结，人类存在的痕迹尚且留存，文明终结于此，它的死亡也由我来见证。亿万年后，或许有别的智慧生命看到这一切？那就请他们记住我吧，倘若我的所思所想跨越无限的时间来到你的面前，那么我所作的一切生命记录都有了意义。</p>
+<h2 id="人类编织着爱、书写着历史"><a href="#人类编织着爱、书写着历史" class="headerlink" title="人类编织着爱、书写着历史"></a>人类编织着爱、书写着历史</h2><p>热力学第二定律告诉我们：熵永恒增加。人类文明受制于宇宙规律，在一个无穷混乱的宇宙中，不可能搭建出存有秩序的太空绿洲。那么就接受毁灭吧，这是谁都无法改变的绝望未来。但正因如此，我想要记住些什么，想要见证些什么，想要留下些什么，想要改变些什么。</p>
+<p>“人类编织着爱，书写着历史。”这是我很喜欢的一首歌的歌词。这句话不可不谓是一句大话、空话，而我却会赋予它意义。前人会把生命记录传递给我，让我来为他们赋予意义；我会把生命记录传递给后人，让他们来为我赋予意义。这大概就是从编织爱到书写历史，从“记住”和“见证”到“留下”和“改变”吧。</p>
+<p>“この眼で確かに見えたんだ  この手で確かに触れたんだ”</p>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src="/img/logo.png"></div><div class="post-copyright__author_name">John Doe</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">Animus's Blog</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2026/02/01/hello-world/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="/img/logo.png"></div><div class="description"></div><div class="bottom-group"><span class="left"><div class="name">John Doe</div><div class="desc">只有迎风，风筝才能飞得更高。</div></span><div class="social-icons is-center"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E%E9%9A%BE%E4%BB%A5%E6%B0%B8%E5%AD%98"><span class="toc-text">人类文明难以永存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E%E4%BD%95%E4%BB%A5%E7%BB%88%E7%BB%93"><span class="toc-text">人类文明何以终结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%84%B6%E5%9B%A0%E7%B4%A0%E5%B8%A6%E6%9D%A5%E7%9A%84%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%BC%A4%E5%AE%B3"><span class="toc-text">自然因素带来的大规模伤害</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%98%9F%E4%BD%93%E6%92%9E%E5%87%BB%E5%9C%B0%E7%90%83"><span class="toc-text">星体撞击地球</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%87%E5%AE%99%E5%B0%84%E7%BA%BF%E8%BE%90%E5%B0%84"><span class="toc-text">宇宙射线辐射</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E7%BA%A7%E7%81%AB%E5%B1%B1%E7%88%86%E5%8F%91"><span class="toc-text">超级火山爆发</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%81%E7%AB%AF%E6%B0%94%E8%B1%A1%E7%81%BE%E5%AE%B3"><span class="toc-text">极端气象灾害</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E7%84%B6%E7%95%8C%E5%8E%9F%E7%94%9F%E7%97%85%E5%8E%9F%E5%AF%BC%E8%87%B4%E7%9A%84%E4%BC%A0%E6%9F%93%E7%97%85%E5%A4%A7%E6%B5%81%E8%A1%8C"><span class="toc-text">自然界原生病原导致的传染病大流行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%BA%E4%B8%BA%E5%9B%A0%E7%B4%A0%E5%B8%A6%E6%9D%A5%E7%9A%84%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%BC%A4%E5%AE%B3"><span class="toc-text">人为因素带来的大规模伤害</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E4%BD%BF%E7%94%A8%E6%A0%B8%E6%AD%A6%E5%99%A8%E7%9A%84%E6%88%98%E4%BA%89%E3%80%81%E6%9A%B4%E4%B9%B1"><span class="toc-text">不使用核武器的战争、暴乱</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B8%E6%88%98%E4%BA%89%E5%92%8C%E6%A0%B8%E6%AD%A6%E5%99%A8%E5%AF%BC%E8%87%B4%E7%9A%84%E5%85%B6%E5%AE%83%E7%81%BE%E5%AE%B3"><span class="toc-text">核战争和核武器导致的其它灾害</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E7%89%A9%E6%AD%A6%E5%99%A8%E4%BD%BF%E7%94%A8%E3%80%81%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%97%85%E5%8E%9F%E4%BD%93%E6%B3%84%E9%9C%B2%E5%AF%BC%E8%87%B4%E7%9A%84%E4%BC%A0%E6%9F%93%E7%97%85%E5%A4%A7%E6%B5%81%E8%A1%8C"><span class="toc-text">生物武器使用、实验室病原体泄露导致的传染病大流行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%81%E7%AB%AF%E7%8E%AF%E5%A2%83%E7%A0%B4%E5%9D%8F"><span class="toc-text">极端环境破坏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B5%84%E6%BA%90%E6%9E%81%E5%BA%A6%E7%9F%AD%E7%BC%BA"><span class="toc-text">资源极度短缺</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%BA%E4%B8%BA%E7%81%AD%E7%BB%9D%E4%BA%BA%E7%B1%BB"><span class="toc-text">人为灭绝人类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E5%AE%83%E9%AB%98%E7%AD%89%E6%99%BA%E6%85%A7%E5%B8%A6%E6%9D%A5%E7%9A%84%E5%A4%A7%E8%A7%84%E6%A8%A1%E4%BC%A4%E5%AE%B3"><span class="toc-text">其它高等智慧带来的大规模伤害</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%8F%8D%E6%8A%97%E4%BA%BA%E7%B1%BB"><span class="toc-text">人工智能反抗人类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%96%E6%98%9F%E4%BA%BA%E5%85%A5%E4%BE%B5%E5%9C%B0%E7%90%83"><span class="toc-text">外星人入侵地球</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%BA%E7%B1%BB%E6%96%87%E6%98%8E%E8%87%AA%E7%84%B6%E8%A1%B0%E4%BA%A1"><span class="toc-text">人类文明自然衰亡</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%88%E7%BB%93%E7%9A%84%E9%82%A3%E4%B8%80%E5%A4%A9"><span class="toc-text">终结的那一天</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%BA%E7%B1%BB%E7%BC%96%E7%BB%87%E7%9D%80%E7%88%B1%E3%80%81%E4%B9%A6%E5%86%99%E7%9D%80%E5%8E%86%E5%8F%B2"><span class="toc-text">人类编织着爱、书写着历史</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/2026/02/15/human-civilization-end-md/" title="人类的终结"><div class="content"><span class="title" href="/2026/02/15/human-civilization-end-md/" title="人类的终结">人类的终结</span></div></a><a class="aside-list-item" href="/2026/02/01/hello-world/" title="Hello World"><div class="content"><span class="title" href="/2026/02/01/hello-world/" title="Hello World">Hello World</span></div></a></div></div></div></div></main><footer id="footer"><div id="st-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2023 - 2026 By<a class="footer-bar-link" href="/" title="John Doe">John Doe</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/" title="框架：Hexo">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="主题：Solitude">主题：Solitude</a></div></div><div class="footer-bar-right"></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><div><!-- Critical scripts loaded synchronously--><script src="/js/utils.js?v=3.0.21"></script><script src="/js/main.js?v=3.0.21"></script><!-- Non-critical scripts loaded asynchronously--><script async src="/js/third_party/waterfall.min.js?v=3.0.21"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><!-- Feature-specific scripts loaded asynchronously--><script defer src="/js/tw_cn.js?v=3.0.21"></script><!-- UI enhancement scripts--><script defer src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><!-- Music player scripts--><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><!-- Cover color processing scripts--><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!-- Search functionality--><!-- Right menu functionality--><div class="js-pjax"></div></div><!-- pjax--><script>let pjax = null;
+
+function initPjax() {
+    if (typeof Pjax === 'undefined') {
+        console.warn('Pjax is not loaded yet, retrying...');
+        setTimeout(initPjax, 100);
+        return;
+    }
+
+    pjax = new Pjax({
+        elements: 'a:not([target="_blank"])',
+        selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+        cacheBust: false,
+        analytics: false,
+        scrollRestoration: false
+    })
+
+    // 将 pjax 实例挂载到全局
+    window.pjax = pjax;
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    document.addEventListener('pjax:complete', () => {
+        window.refreshFn()
+
+        document.querySelectorAll('script[data-pjax]').forEach(item => {
+            const newScript = document.createElement('script')
+            const content = item.text || item.textContent || item.innerHTML || ""
+            Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+            newScript.appendChild(document.createTextNode(content))
+            item.parentNode.replaceChild(newScript, item)
+        })
+
+        GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+    })
+
+    document.addEventListener('pjax:error', (e) => {
+        if (e.request.status === 404) {
+            pjax.loadUrl('/404.html')
+        }
+    })
+}
+
+// 初始化 Pjax
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPjax);
+} else {
+    initPjax();
+}</script><!-- google adsense--><div><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips"><i class="music-control-btn fas fa-backward-step" id="music-prev" onclick="sco.musicSkipBack()"></i><i class="music-control-btn fas fa-pause" id="music-pause" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-play" id="music-play" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-forward-step" id="music-next" onclick="sco.musicSkipForward()"></i></div><meting-js id="13758803155" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></div></body></html>
+        <script>
+            const posts = ["2026/02/15/human-civilization-end-md/","2026/02/01/hello-world/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>
