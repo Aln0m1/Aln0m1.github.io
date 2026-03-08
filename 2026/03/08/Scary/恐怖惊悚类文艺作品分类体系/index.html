@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Untitled | Animus's Blog</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/pwa/favicon.png"><link rel="stylesheet" href="/css/index.css?v=3.0.21"><link rel="canonical" href="https://aln0m1.github.io/2026/03/08/Scary/%E6%81%90%E6%80%96%E6%83%8A%E6%82%9A%E7%B1%BB%E6%96%87%E8%89%BA%E4%BD%9C%E5%93%81%E5%88%86%E7%B1%BB%E4%BD%93%E7%B3%BB/index.html"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- Feature-specific CSS--><!-- aplayer--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><!-- fancybox ui--><!-- katex--><!-- Open Graph--><meta name="description" content="一、 超常本源威胁指那些从根本上违背已知自然法则和科学认知的威胁。其恐怖感源于对不可理解之力量的无力感。 1.1 超自然形象有形体： 亡灵（鬼魂、僵尸）、妖魔（精怪、恶魔）、灵异造物（诅咒人偶）、传统超自然生物（吸血鬼、狼人）。无形体： 怨念聚合体、无形诅咒之源、可附身的灵体、梦境吞噬者。 1.2"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="Animus's Blog"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.png"><link rel="apple-touch-icon" href="/img/pwa/favicon.png" sizes="180x180"><script>console.log(' %c Solitude %c ' + '3.0.21' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2023-04-20 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可"},
+    aside: {
+        state: {
+            morning: "✨ 早上好，新的一天开始了",
+            noon: "🍲 午餐时间",
+            afternoon: "🌞 下午好",
+            night: "早点休息",
+            goodnight: "晚安 😴",
+        },
+        witty_words: [],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: false,
+    lightbox: 'null',
+    right_menu: false,
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: false,
+    expire: false,
+};</script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: false,
+    ai_text: false,
+    color: false,
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body id="body"><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fas fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="item"><a href="/archives/2026/03/"><span class="date">2026/03</span><div class="count-group"><span class="count">41</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2026/02/"><span class="date">2026/02</span><div class="count-group"><span class="count">3</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/"><span class="date">全部文章</span><div class="count-group"><span class="count">44</span><span class="unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fas fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a href="/" title="返回博客主页" id="site-name"><span class="title">Solitude</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">Untitled</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude fas fa-arrow-up"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><div class="tag_share"><div class="post-meta__tag-list"></div></div></div></div><h1 class="post-title">Untitled</h1><div id="post-meta"><div class="meta-secondline"></div></div></div><div class="post-radius-bottom"></div><article class="post-content article-container"><h1 id="一、-超常本源威胁"><a href="#一、-超常本源威胁" class="headerlink" title="一、 超常本源威胁"></a>一、 超常本源威胁</h1><p>指那些从根本上违背已知自然法则和科学认知的威胁。其恐怖感源于对不可理解之力量的无力感。</p>
+<h2 id="1-1-超自然形象"><a href="#1-1-超自然形象" class="headerlink" title="1.1 超自然形象"></a>1.1 超自然形象</h2><p>有形体： 亡灵（鬼魂、僵尸）、妖魔（精怪、恶魔）、灵异造物（诅咒人偶）、传统超自然生物（吸血鬼、狼人）。<br>无形体： 怨念聚合体、无形诅咒之源、可附身的灵体、梦境吞噬者。</p>
+<h2 id="1-2-超自然现象"><a href="#1-2-超自然现象" class="headerlink" title="1.2 超自然现象"></a>1.2 超自然现象</h2><p>诅咒与预言： 血缘诅咒、必死预言、献祭规则。<br>时空异常： 无限循环空间、时空重叠与错位、维度裂缝。<br>环境异动： 物体的超自然活动（悬浮、变形）、环境的非理性变化（墙壁渗血、房间伸缩）、幻听与幻影现象。</p>
+<h1 id="二、-未知-异界本源威胁"><a href="#二、-未知-异界本源威胁" class="headerlink" title="二、 未知&#x2F;异界本源威胁"></a>二、 未知&#x2F;异界本源威胁</h1><p>指那些未被人类文明探明，但可能存在于宇宙或地球角落的“未知”威胁。其恐怖感源于对陌生领域的探索与遭遇。</p>
+<h2 id="2-1-未知生物"><a href="#2-1-未知生物" class="headerlink" title="2.1 未知生物"></a>2.1 未知生物</h2><p>地外生物（非超能力，但有奇特生理结构）、隐秘生物（雪人、深海怪）、自然变异体。</p>
+<h2 id="2-2-未知领域与现象"><a href="#2-2-未知领域与现象" class="headerlink" title="2.2 未知领域与现象"></a>2.2 未知领域与现象</h2><p>诡异区域： 遵循异常规则的村落&#x2F;森林、空间扭曲之地。<br>未解事件： 符合物理规律但无法追因的集体失踪、历史悬案、周期性死亡事件。物体拟态： 无明确超自然解释的物体“活态化”（雕像姿势变化、玩偶目光追随）。</p>
+<h1 id="三、-人性异化与社会失序威胁"><a href="#三、-人性异化与社会失序威胁" class="headerlink" title="三、 人性异化与社会失序威胁"></a>三、 人性异化与社会失序威胁</h1><p>指威胁完全源于人类自身或其构建的社会结构。其恐怖感源于对同类的绝望以及对文明脆弱的认知。</p>
+<h2 id="3-1-极端个体之恶"><a href="#3-1-极端个体之恶" class="headerlink" title="3.1 极端个体之恶"></a>3.1 极端个体之恶</h2><p>连环谋杀、变态犯罪、恐怖复仇、私刑虐杀。</p>
+<h2 id="3-2-集体性-系统性之恶"><a href="#3-2-集体性-系统性之恶" class="headerlink" title="3.2 集体性&#x2F;系统性之恶"></a>3.2 集体性&#x2F;系统性之恶</h2><p>战争与暴政： 大屠杀、集中营、酷刑、镇压。<br>社会崩溃： 暴乱中的无差别暴力、末日下的生存掠夺。<br>邪教与狂热： 诡异仪式、集体献祭、精神操控下的自残&#x2F;攻击。<br>反乌托邦系统： 制度化的监控、思想控制与惩罚。</p>
+<h2 id="3-3-失控的创造"><a href="#3-3-失控的创造" class="headerlink" title="3.3 失控的创造"></a>3.3 失控的创造</h2><p>科技灾难： 人工智能反叛、生物武器泄漏、虚拟现实陷阱。<br>实验失控： 非法人体改造、精神控制实验、制造恐怖生物。</p>
+<h1 id="四、-自然与存在性威胁"><a href="#四、-自然与存在性威胁" class="headerlink" title="四、 自然与存在性威胁"></a>四、 自然与存在性威胁</h1><p>指威胁源于自然环境、人体自身机能的故障，或对存在根基的质疑。其恐怖感源于对生存根本保障的剥夺。</p>
+<h2 id="4-1-自然之力与险境"><a href="#4-1-自然之力与险境" class="headerlink" title="4.1 自然之力与险境"></a>4.1 自然之力与险境</h2><p>极端自然灾害、野外生存危机（迷路、猛兽）、有毒环境。</p>
+<h2 id="4-2-心智与肉体的崩坏"><a href="#4-2-心智与肉体的崩坏" class="headerlink" title="4.2 心智与肉体的崩坏"></a>4.2 心智与肉体的崩坏</h2><p>已知精神疾病极端化： 精神分裂的暴力人格、妄想症引发的攻击、重度强迫症的自毁。<br>认知危机： 感知欺骗（中毒&#x2F;病变所致）、现实感丧失、记忆紊乱。<br>生理崩溃： 致命疾病、无法遏制的寄生、不可逆的躯体变异。</p>
+<h1 id="五、-复合-模糊本源威胁"><a href="#五、-复合-模糊本源威胁" class="headerlink" title="五、 复合&#x2F;模糊本源威胁"></a>五、 复合&#x2F;模糊本源威胁</h1><p>指作品刻意模糊威胁的本源，或在多重解释之间保持悬疑，将恐怖感留给观众自身对解释的选择。</p>
+<h2 id="5-1-模棱两可现象"><a href="#5-1-模棱两可现象" class="headerlink" title="5.1 模棱两可现象"></a>5.1 模棱两可现象</h2><p>事件既可用超自然解释，也可归结为集体癔症、未知病毒或高维干预。</p>
+<h2 id="5-2-叙境留白"><a href="#5-2-叙境留白" class="headerlink" title="5.2 叙境留白"></a>5.2 叙境留白</h2><p>作品不提供任何明确解释，仅展示恐怖现象本身，本源成为永远的秘密。</p>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src="/img/logo.png"></div><div class="post-copyright__author_name">Animus</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">Animus's Blog</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2026/03/08/Scary/%E6%83%8A%E6%82%9A%E7%B1%BB%E6%96%87%E8%89%BA%E4%BD%9C%E5%93%81%E7%9A%84%E5%88%86%E7%B1%BB%E7%A0%94%E7%A9%B6/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Untitled</div></div></a></div><div class="next-post pull-right"><a href="/2026/03/08/Other%20Tools%20and%20Skills/Python/Python%E7%9A%84%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Untitled</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="/img/logo.png"></div><div class="description"></div><div class="bottom-group"><span class="left"><div class="name">Animus</div><div class="desc">一切并非无法改变，伸出手吧。</div></span><div class="social-icons is-center"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81-%E8%B6%85%E5%B8%B8%E6%9C%AC%E6%BA%90%E5%A8%81%E8%83%81"><span class="toc-text">一、 超常本源威胁</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E8%B6%85%E8%87%AA%E7%84%B6%E5%BD%A2%E8%B1%A1"><span class="toc-text">1.1 超自然形象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E8%B6%85%E8%87%AA%E7%84%B6%E7%8E%B0%E8%B1%A1"><span class="toc-text">1.2 超自然现象</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-%E6%9C%AA%E7%9F%A5-%E5%BC%82%E7%95%8C%E6%9C%AC%E6%BA%90%E5%A8%81%E8%83%81"><span class="toc-text">二、 未知&#x2F;异界本源威胁</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E6%9C%AA%E7%9F%A5%E7%94%9F%E7%89%A9"><span class="toc-text">2.1 未知生物</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E6%9C%AA%E7%9F%A5%E9%A2%86%E5%9F%9F%E4%B8%8E%E7%8E%B0%E8%B1%A1"><span class="toc-text">2.2 未知领域与现象</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81-%E4%BA%BA%E6%80%A7%E5%BC%82%E5%8C%96%E4%B8%8E%E7%A4%BE%E4%BC%9A%E5%A4%B1%E5%BA%8F%E5%A8%81%E8%83%81"><span class="toc-text">三、 人性异化与社会失序威胁</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E6%9E%81%E7%AB%AF%E4%B8%AA%E4%BD%93%E4%B9%8B%E6%81%B6"><span class="toc-text">3.1 极端个体之恶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E9%9B%86%E4%BD%93%E6%80%A7-%E7%B3%BB%E7%BB%9F%E6%80%A7%E4%B9%8B%E6%81%B6"><span class="toc-text">3.2 集体性&#x2F;系统性之恶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-%E5%A4%B1%E6%8E%A7%E7%9A%84%E5%88%9B%E9%80%A0"><span class="toc-text">3.3 失控的创造</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81-%E8%87%AA%E7%84%B6%E4%B8%8E%E5%AD%98%E5%9C%A8%E6%80%A7%E5%A8%81%E8%83%81"><span class="toc-text">四、 自然与存在性威胁</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E8%87%AA%E7%84%B6%E4%B9%8B%E5%8A%9B%E4%B8%8E%E9%99%A9%E5%A2%83"><span class="toc-text">4.1 自然之力与险境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-%E5%BF%83%E6%99%BA%E4%B8%8E%E8%82%89%E4%BD%93%E7%9A%84%E5%B4%A9%E5%9D%8F"><span class="toc-text">4.2 心智与肉体的崩坏</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81-%E5%A4%8D%E5%90%88-%E6%A8%A1%E7%B3%8A%E6%9C%AC%E6%BA%90%E5%A8%81%E8%83%81"><span class="toc-text">五、 复合&#x2F;模糊本源威胁</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-%E6%A8%A1%E6%A3%B1%E4%B8%A4%E5%8F%AF%E7%8E%B0%E8%B1%A1"><span class="toc-text">5.1 模棱两可现象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-%E5%8F%99%E5%A2%83%E7%95%99%E7%99%BD"><span class="toc-text">5.2 叙境留白</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/2026/03/08/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6/Chapter1%20%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6%E5%AF%BC%E8%AE%BA/" title="Chapter1 进化心理学导论"><div class="content"><span class="title" href="/2026/03/08/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6/Chapter1%20%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6%E5%AF%BC%E8%AE%BA/" title="Chapter1 进化心理学导论">Chapter1 进化心理学导论</span><span class="categories" href="/2026/03/08/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6/Chapter1%20%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6%E5%AF%BC%E8%AE%BA/">进化心理学</span></div></a><a class="aside-list-item" href="/2026/03/08/TG0TG1/TOGENASHI%20TOGEARI%20MUSIC%20RANK/" title="TOGENASHI TOGEARI MUSIC RANK"><div class="content"><span class="title" href="/2026/03/08/TG0TG1/TOGENASHI%20TOGEARI%20MUSIC%20RANK/" title="TOGENASHI TOGEARI MUSIC RANK">TOGENASHI TOGEARI MUSIC RANK</span><span class="categories" href="/2026/03/08/TG0TG1/TOGENASHI%20TOGEARI%20MUSIC%20RANK/">TG0TG1</span></div></a><a class="aside-list-item" href="/2026/03/08/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6/Chapter2%20%E8%BF%9B%E5%8C%96%E7%9A%84%E6%B3%95%E5%88%99/" title="Chapter2 进化的法则"><div class="content"><span class="title" href="/2026/03/08/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6/Chapter2%20%E8%BF%9B%E5%8C%96%E7%9A%84%E6%B3%95%E5%88%99/" title="Chapter2 进化的法则">Chapter2 进化的法则</span><span class="categories" href="/2026/03/08/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6/Chapter2%20%E8%BF%9B%E5%8C%96%E7%9A%84%E6%B3%95%E5%88%99/">进化心理学</span></div></a><a class="aside-list-item" href="/2026/03/08/Templates/%E6%88%91%E7%9A%84%E6%A8%A1%E7%89%88/" title="{{title}}"><div class="content"><span class="title" href="/2026/03/08/Templates/%E6%88%91%E7%9A%84%E6%A8%A1%E7%89%88/" title="{{title}}">{{title}}</span></div></a><a class="aside-list-item" href="/2026/03/08/Unso's%20Analysis/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/%E5%A4%8D%E6%95%B0/" title="Untitled"><div class="content"><span class="title" href="/2026/03/08/Unso's%20Analysis/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/%E5%A4%8D%E6%95%B0/" title="Untitled">Untitled</span></div></a></div></div></div></div></main><footer id="footer"><div id="st-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2023 - 2026 By<a class="footer-bar-link" href="/" title="Animus">Animus</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/" title="框架：Hexo">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="主题：Solitude">主题：Solitude</a></div></div><div class="footer-bar-right"></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><div><!-- Critical scripts loaded synchronously--><script src="/js/utils.js?v=3.0.21"></script><script src="/js/main.js?v=3.0.21"></script><!-- Non-critical scripts loaded asynchronously--><script async src="/js/third_party/waterfall.min.js?v=3.0.21"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><!-- Feature-specific scripts loaded asynchronously--><script defer src="/js/tw_cn.js?v=3.0.21"></script><!-- UI enhancement scripts--><script defer src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><!-- Music player scripts--><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><!-- Cover color processing scripts--><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!-- Search functionality--><!-- Right menu functionality--><div class="js-pjax"></div></div><!-- pjax--><script>let pjax = null;
+
+function initPjax() {
+    if (typeof Pjax === 'undefined') {
+        console.warn('Pjax is not loaded yet, retrying...');
+        setTimeout(initPjax, 100);
+        return;
+    }
+
+    pjax = new Pjax({
+        elements: 'a:not([target="_blank"])',
+        selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+        cacheBust: false,
+        analytics: false,
+        scrollRestoration: false
+    })
+
+    // 将 pjax 实例挂载到全局
+    window.pjax = pjax;
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    document.addEventListener('pjax:complete', () => {
+        window.refreshFn()
+
+        document.querySelectorAll('script[data-pjax]').forEach(item => {
+            const newScript = document.createElement('script')
+            const content = item.text || item.textContent || item.innerHTML || ""
+            Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+            newScript.appendChild(document.createTextNode(content))
+            item.parentNode.replaceChild(newScript, item)
+        })
+
+        GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+    })
+
+    document.addEventListener('pjax:error', (e) => {
+        if (e.request.status === 404) {
+            pjax.loadUrl('/404.html')
+        }
+    })
+}
+
+// 初始化 Pjax
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPjax);
+} else {
+    initPjax();
+}</script><!-- google adsense--></body></html>
+        <script>
+            const posts = ["2026/03/08/进化心理学/Chapter1 进化心理学导论/","2026/03/08/TG0TG1/TOGENASHI TOGEARI MUSIC RANK/","2026/03/08/进化心理学/Chapter2 进化的法则/","2026/03/08/Templates/我的模版/","2026/03/08/Unso's Analysis/泛函分析/复数/","2026/03/08/Unso's Algothrim/递归和分治/分治/","2026/03/08/Unso's Algothrim/树和图/Floyd算法/","2026/03/08/Unso's Algothrim/数论/模运算和费马小定理/","2026/03/08/Unso's Algothrim/动态规划/动态规划和记忆化搜索/","2026/03/08/Unso's Algothrim/其它/线性方程组思想/","2026/03/08/Unso's Algothrim/其它/前缀和/","2026/03/08/TG0TG1/Animation/","2026/03/08/Scary/惊悚类文艺作品的分类研究/","2026/03/08/Scary/恐怖惊悚类文艺作品分类体系/","2026/03/08/Other Tools and Skills/Python/Python的奇技淫巧/","2026/03/08/Other Tools and Skills/Git/","2026/03/08/Operating System/Lec 1/","2026/03/08/Obsidian Manager/创建链接/","2026/03/08/Obsidian Manager/欢迎/","2026/03/08/Obsidian Manager/Obsidian笔记规划/","2026/03/08/Object-Oriented Programming/OO_Lectures/Lec3/","2026/03/08/Object-Oriented Programming/OO_Lectures/Lec1-2/","2026/03/08/Machine Learning/Chapter 2. 机器学习中的线性代数、多变量线性回归/","2026/03/08/Machine Learning/Chapter 1. 监督学习、无监督学习、简单的回归/","2026/03/08/Computer Organization/VERILOG/编写可综合的Verilog代码/","2026/03/08/Computer Organization/VERILOG/Verilog工程开发、仿真、调试实例/","2026/03/08/Computer Organization/VERILOG/Verilog代码规范/","2026/03/08/Computer Organization/VERILOG/Verilog 语法 逻辑建模/","2026/03/08/Computer Organization/VERILOG/Verilog 语法 运算符/","2026/03/08/Computer Organization/VERILOG/Verilog 语法 端口、驱动与赋值/","2026/03/08/Computer Organization/VERILOG/Verilog 语法 有符号数的处理/","2026/03/08/Computer Organization/MIPS/MIPS题目/","2026/03/08/Computer Organization/CO实验文件/document/","2026/03/08/Computer Organization/CO_Lectures/Lec8 外部存储与输入输出/","2026/03/08/Computer Organization/CO_Lectures/Lec7 高速缓存与虚拟存储/","2026/03/08/Computer Organization/CO_Lectures/Lec6 MIPS处理器设计/","2026/03/08/Computer Organization/CO_Lectures/Lec5 指令系统/","2026/03/08/Computer Organization/CO_Lectures/Lec4 主存储器/","2026/03/08/Computer Organization/CO_Lectures/Lec3 时序逻辑/","2026/03/08/Computer Organization/CO_Lectures/Lec2 组合逻辑/","2026/03/08/Computer Organization/CO_Lectures/Lec1 概述/","2026/02/20/故事一则/","2026/02/15/human-civilization-end-md/","2026/02/01/hello-world/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>

@@ -1,0 +1,246 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Untitled | Animus's Blog</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/pwa/favicon.png"><link rel="stylesheet" href="/css/index.css?v=3.0.21"><link rel="canonical" href="https://aln0m1.github.io/2026/03/08/Computer%20Organization/VERILOG/Verilog%20%E8%AF%AD%E6%B3%95%20%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E5%A4%84%E7%90%86/index.html"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- Feature-specific CSS--><!-- aplayer--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><!-- fancybox ui--><!-- katex--><!-- Open Graph--><meta name="description" content="在 Verilog HDL 中，wire、reg 等数据类型默认都是无符号的。当你希望做符号数的操作时，你需要使用 **$signed()**。 假如我们有代码：module comparator( input clk, input reset, input [3:0] a,"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="Animus's Blog"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.png"><link rel="apple-touch-icon" href="/img/pwa/favicon.png" sizes="180x180"><script>console.log(' %c Solitude %c ' + '3.0.21' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2023-04-20 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可"},
+    aside: {
+        state: {
+            morning: "✨ 早上好，新的一天开始了",
+            noon: "🍲 午餐时间",
+            afternoon: "🌞 下午好",
+            night: "早点休息",
+            goodnight: "晚安 😴",
+        },
+        witty_words: [],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: false,
+    lightbox: 'null',
+    right_menu: false,
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: false,
+    expire: false,
+};</script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: false,
+    ai_text: false,
+    color: false,
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body id="body"><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fas fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="item"><a href="/archives/2026/03/"><span class="date">2026/03</span><div class="count-group"><span class="count">41</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2026/02/"><span class="date">2026/02</span><div class="count-group"><span class="count">3</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/"><span class="date">全部文章</span><div class="count-group"><span class="count">44</span><span class="unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fas fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">44</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a href="/" title="返回博客主页" id="site-name"><span class="title">Solitude</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">Untitled</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude fas fa-arrow-up"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><div class="tag_share"><div class="post-meta__tag-list"></div></div></div></div><h1 class="post-title">Untitled</h1><div id="post-meta"><div class="meta-secondline"></div></div></div><div class="post-radius-bottom"></div><article class="post-content article-container"><p>在 Verilog HDL 中，wire、reg 等数据类型默认都是<strong>无符号的</strong>。当你希望做符号数的操作时，你需要使用 **$signed()**。</p>
+<p>假如我们有代码：<br><code>module comparator(</code><br>    <code>input clk,</code><br>    <code>input reset,</code><br>    <code>input [3:0] a,</code><br>    <code>input [3:0] b,</code><br>    <code>output res</code><br>    <code>);</code><br>    <code>assign res = a &gt; b;</code><br><code>endmodule</code><br>于是我们编写了如下的测试程序，实现初始化 a &#x3D; 4，b &#x3D; 1，100ns 后 b 变为 -1。<br>经过测试，100ns之后res变成了0，而期望的结果是 res 始终为 1。<br>发生意外的原因在于：<strong>比较时 Verilog 将 a 和 b 默认视为无符号数</strong>，-1 会被认为是 15(4’b0000)。将比较代码修改为 assign res &#x3D; $signed(a) &gt; $signed(b); ，程序即可达到预期结果。![[Pasted image 20250922232052.png]]<br>当我们对无符号数和符号数同时操作时，Verilog 会自动地做数据类型匹配，<strong>将符号数向无符号数转化</strong>。例如执行 <code>a &gt; $signed(b)</code> 时，a 是无符号数，$signed(b) 是符号数，Verilog <strong>默认向无符号类型转化</strong>，得到的结果仍是无符号数的比较结果。</p>
+<h2 id="处理有符号数的原理"><a href="#处理有符号数的原理" class="headerlink" title="处理有符号数的原理"></a>处理有符号数的原理</h2><p>Verilog 对于符号的处理有些特殊，分为<strong>最外层表达式符号的确定</strong>与<strong>向内传播</strong>两个过程。也就是说<strong>先确定下来最终结果有无符号，再向内传播进行类型转换，</strong> 诸多诡异行为的罪魁祸首就是向内传播。</p>
+<p>为了方便后续表述，让我们先定义两个概念。<strong>表达式和原子表达式</strong>，<strong>自决定表达式和上下文决定表达式</strong>。</p>
+<ul>
+<li><strong>单独</strong>的运算数（比如<strong>常数，变量</strong>）是表达式。</li>
+<li>表达式与运算符的<strong>合法组合</strong>是表达式。</li>
+<li>定义了<strong>子表达式</strong>和<strong>原子表达式</strong>。</li>
+<li>自决定表达式的位宽和符号都是由自身决定的，和表达式所在的上下文无关。比如布尔表达式，该表达式的结果总是一位的无符号数。</li>
+<li>上下文决定表达式的位宽和符号既由自身又由上下文决定。比如 <code>a + $signed(b)</code> 的例子。它的符号不由自身决定，它取决于其子表达式。![[Pasted image 20250922233718.png]]</li>
+</ul>
+<h4 id="最外层表达式符号的确定"><a href="#最外层表达式符号的确定" class="headerlink" title="最外层表达式符号的确定"></a>最外层表达式符号的确定</h4><ul>
+<li>自决定表达式的符号由自身决定。</li>
+<li>上下文决定表达式的符号和位宽<strong>由其子表达式决定。子表达式中有任一表达式是无符号则该表达式就是无符号的。</strong></li>
+<li>子表达式有无符号怎么确定？当做最外层表达式来判定。<strong>实质递归。</strong></li>
+</ul>
+<h4 id="内向传播"><a href="#内向传播" class="headerlink" title="内向传播"></a>内向传播</h4><p>在用上述的规则确定好最外层表达式后，将<strong>最外层</strong>表达式的<strong>位宽和符号</strong>由<strong>外向内</strong>地传递给<strong>上下文决定的</strong>子表达式。这也是<strong>递归</strong>，直至遇到原子表达式时<strong>强制转换</strong>原子表达式的类型。</p>
+<h4 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h4><ul>
+<li>Verilog 语言规定关系表达式与等式表达式属于<strong>自确定与上下文决定的中间态</strong>，具体体现为结果是自确定的，但是它们的子表达式需要相互影响。</li>
+<li>移位运算符右侧的<strong>操作数总是被视为无符号数</strong>，对于符号的确定无影响，而是由运算符<strong>左侧的操作数和表达式的其余部分</strong>共同决定。</li>
+<li>对于三目运算符，其 <strong>‘?’ 前的布尔表达式是自决定的</strong>表达式，<strong>不会</strong>对最外层表达式的符号造成影响。</li>
+</ul>
+<h2 id="处理有符号数的方法"><a href="#处理有符号数的方法" class="headerlink" title="处理有符号数的方法"></a>处理有符号数的方法</h2><h4 id="一、保持运算数符号性一致"><a href="#一、保持运算数符号性一致" class="headerlink" title="一、保持运算数符号性一致"></a>一、保持运算数符号性一致</h4><p>使用 $signed() 尽量使得运算数间有&#x2F;无符号相同（移位运算是个例外），这样容易确定结果的符号。</p>
+<h4 id="二、把符号标记用在简单的地方"><a href="#二、把符号标记用在简单的地方" class="headerlink" title="二、把符号标记用在简单的地方"></a>二、把符号标记用在简单的地方</h4><p>![[Pasted image 20250922235322.png]]1好2坏。<br>对于复杂的表达式避免使用 $signed() ，如果希望使用 $signed() 可以将这一部分抽离出来单独作为一个变量。</p>
+<ul>
+<li>算术右移在左操作数无符号时高位仍然补0，与逻辑右移效果相同。</li>
+</ul>
+<h4 id="三、不使用-signed"><a href="#三、不使用-signed" class="headerlink" title="三、不使用$signed()"></a>三、不使用$signed()</h4><p>比如符号拓展可以写成如下：![[Pasted image 20250922235501.png]]</p>
+<h4 id="四、写个testbench测试一下"><a href="#四、写个testbench测试一下" class="headerlink" title="四、写个testbench测试一下"></a>四、写个testbench测试一下</h4></article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src="/img/logo.png"></div><div class="post-copyright__author_name">Animus</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">Animus's Blog</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2026/03/08/Computer%20Organization/VERILOG/Verilog%20%E8%AF%AD%E6%B3%95%20%E7%AB%AF%E5%8F%A3%E3%80%81%E9%A9%B1%E5%8A%A8%E4%B8%8E%E8%B5%8B%E5%80%BC/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Untitled</div></div></a></div><div class="next-post pull-right"><a href="/2026/03/08/Computer%20Organization/MIPS/MIPS%E9%A2%98%E7%9B%AE/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Untitled</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="/img/logo.png"></div><div class="description"></div><div class="bottom-group"><span class="left"><div class="name">Animus</div><div class="desc">一切并非无法改变，伸出手吧。</div></span><div class="social-icons is-center"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-text">处理有符号数的原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%A4%96%E5%B1%82%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AC%A6%E5%8F%B7%E7%9A%84%E7%A1%AE%E5%AE%9A"><span class="toc-text">最外层表达式符号的确定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%90%91%E4%BC%A0%E6%92%AD"><span class="toc-text">内向传播</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5"><span class="toc-text">特殊情况</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">处理有符号数的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BF%9D%E6%8C%81%E8%BF%90%E7%AE%97%E6%95%B0%E7%AC%A6%E5%8F%B7%E6%80%A7%E4%B8%80%E8%87%B4"><span class="toc-text">一、保持运算数符号性一致</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%8A%8A%E7%AC%A6%E5%8F%B7%E6%A0%87%E8%AE%B0%E7%94%A8%E5%9C%A8%E7%AE%80%E5%8D%95%E7%9A%84%E5%9C%B0%E6%96%B9"><span class="toc-text">二、把符号标记用在简单的地方</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%B8%8D%E4%BD%BF%E7%94%A8-signed"><span class="toc-text">三、不使用$signed()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%86%99%E4%B8%AAtestbench%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B"><span class="toc-text">四、写个testbench测试一下</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/2026/03/08/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6/Chapter1%20%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6%E5%AF%BC%E8%AE%BA/" title="Chapter1 进化心理学导论"><div class="content"><span class="title" href="/2026/03/08/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6/Chapter1%20%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6%E5%AF%BC%E8%AE%BA/" title="Chapter1 进化心理学导论">Chapter1 进化心理学导论</span><span class="categories" href="/2026/03/08/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6/Chapter1%20%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6%E5%AF%BC%E8%AE%BA/">进化心理学</span></div></a><a class="aside-list-item" href="/2026/03/08/TG0TG1/TOGENASHI%20TOGEARI%20MUSIC%20RANK/" title="TOGENASHI TOGEARI MUSIC RANK"><div class="content"><span class="title" href="/2026/03/08/TG0TG1/TOGENASHI%20TOGEARI%20MUSIC%20RANK/" title="TOGENASHI TOGEARI MUSIC RANK">TOGENASHI TOGEARI MUSIC RANK</span><span class="categories" href="/2026/03/08/TG0TG1/TOGENASHI%20TOGEARI%20MUSIC%20RANK/">TG0TG1</span></div></a><a class="aside-list-item" href="/2026/03/08/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6/Chapter2%20%E8%BF%9B%E5%8C%96%E7%9A%84%E6%B3%95%E5%88%99/" title="Chapter2 进化的法则"><div class="content"><span class="title" href="/2026/03/08/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6/Chapter2%20%E8%BF%9B%E5%8C%96%E7%9A%84%E6%B3%95%E5%88%99/" title="Chapter2 进化的法则">Chapter2 进化的法则</span><span class="categories" href="/2026/03/08/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6/Chapter2%20%E8%BF%9B%E5%8C%96%E7%9A%84%E6%B3%95%E5%88%99/">进化心理学</span></div></a><a class="aside-list-item" href="/2026/03/08/Templates/%E6%88%91%E7%9A%84%E6%A8%A1%E7%89%88/" title="{{title}}"><div class="content"><span class="title" href="/2026/03/08/Templates/%E6%88%91%E7%9A%84%E6%A8%A1%E7%89%88/" title="{{title}}">{{title}}</span></div></a><a class="aside-list-item" href="/2026/03/08/Unso's%20Analysis/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/%E5%A4%8D%E6%95%B0/" title="Untitled"><div class="content"><span class="title" href="/2026/03/08/Unso's%20Analysis/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/%E5%A4%8D%E6%95%B0/" title="Untitled">Untitled</span></div></a></div></div></div></div></main><footer id="footer"><div id="st-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2023 - 2026 By<a class="footer-bar-link" href="/" title="Animus">Animus</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/" title="框架：Hexo">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="主题：Solitude">主题：Solitude</a></div></div><div class="footer-bar-right"></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><div><!-- Critical scripts loaded synchronously--><script src="/js/utils.js?v=3.0.21"></script><script src="/js/main.js?v=3.0.21"></script><!-- Non-critical scripts loaded asynchronously--><script async src="/js/third_party/waterfall.min.js?v=3.0.21"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><!-- Feature-specific scripts loaded asynchronously--><script defer src="/js/tw_cn.js?v=3.0.21"></script><!-- UI enhancement scripts--><script defer src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><!-- Music player scripts--><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><!-- Cover color processing scripts--><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!-- Search functionality--><!-- Right menu functionality--><div class="js-pjax"></div></div><!-- pjax--><script>let pjax = null;
+
+function initPjax() {
+    if (typeof Pjax === 'undefined') {
+        console.warn('Pjax is not loaded yet, retrying...');
+        setTimeout(initPjax, 100);
+        return;
+    }
+
+    pjax = new Pjax({
+        elements: 'a:not([target="_blank"])',
+        selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+        cacheBust: false,
+        analytics: false,
+        scrollRestoration: false
+    })
+
+    // 将 pjax 实例挂载到全局
+    window.pjax = pjax;
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    document.addEventListener('pjax:complete', () => {
+        window.refreshFn()
+
+        document.querySelectorAll('script[data-pjax]').forEach(item => {
+            const newScript = document.createElement('script')
+            const content = item.text || item.textContent || item.innerHTML || ""
+            Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+            newScript.appendChild(document.createTextNode(content))
+            item.parentNode.replaceChild(newScript, item)
+        })
+
+        GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+    })
+
+    document.addEventListener('pjax:error', (e) => {
+        if (e.request.status === 404) {
+            pjax.loadUrl('/404.html')
+        }
+    })
+}
+
+// 初始化 Pjax
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPjax);
+} else {
+    initPjax();
+}</script><!-- google adsense--></body></html>
+        <script>
+            const posts = ["2026/03/08/进化心理学/Chapter1 进化心理学导论/","2026/03/08/TG0TG1/TOGENASHI TOGEARI MUSIC RANK/","2026/03/08/进化心理学/Chapter2 进化的法则/","2026/03/08/Templates/我的模版/","2026/03/08/Unso's Analysis/泛函分析/复数/","2026/03/08/Unso's Algothrim/递归和分治/分治/","2026/03/08/Unso's Algothrim/树和图/Floyd算法/","2026/03/08/Unso's Algothrim/数论/模运算和费马小定理/","2026/03/08/Unso's Algothrim/动态规划/动态规划和记忆化搜索/","2026/03/08/Unso's Algothrim/其它/线性方程组思想/","2026/03/08/Unso's Algothrim/其它/前缀和/","2026/03/08/TG0TG1/Animation/","2026/03/08/Scary/惊悚类文艺作品的分类研究/","2026/03/08/Scary/恐怖惊悚类文艺作品分类体系/","2026/03/08/Other Tools and Skills/Python/Python的奇技淫巧/","2026/03/08/Other Tools and Skills/Git/","2026/03/08/Operating System/Lec 1/","2026/03/08/Obsidian Manager/创建链接/","2026/03/08/Obsidian Manager/欢迎/","2026/03/08/Obsidian Manager/Obsidian笔记规划/","2026/03/08/Object-Oriented Programming/OO_Lectures/Lec3/","2026/03/08/Object-Oriented Programming/OO_Lectures/Lec1-2/","2026/03/08/Machine Learning/Chapter 2. 机器学习中的线性代数、多变量线性回归/","2026/03/08/Machine Learning/Chapter 1. 监督学习、无监督学习、简单的回归/","2026/03/08/Computer Organization/VERILOG/编写可综合的Verilog代码/","2026/03/08/Computer Organization/VERILOG/Verilog工程开发、仿真、调试实例/","2026/03/08/Computer Organization/VERILOG/Verilog代码规范/","2026/03/08/Computer Organization/VERILOG/Verilog 语法 逻辑建模/","2026/03/08/Computer Organization/VERILOG/Verilog 语法 运算符/","2026/03/08/Computer Organization/VERILOG/Verilog 语法 端口、驱动与赋值/","2026/03/08/Computer Organization/VERILOG/Verilog 语法 有符号数的处理/","2026/03/08/Computer Organization/MIPS/MIPS题目/","2026/03/08/Computer Organization/CO实验文件/document/","2026/03/08/Computer Organization/CO_Lectures/Lec8 外部存储与输入输出/","2026/03/08/Computer Organization/CO_Lectures/Lec7 高速缓存与虚拟存储/","2026/03/08/Computer Organization/CO_Lectures/Lec6 MIPS处理器设计/","2026/03/08/Computer Organization/CO_Lectures/Lec5 指令系统/","2026/03/08/Computer Organization/CO_Lectures/Lec4 主存储器/","2026/03/08/Computer Organization/CO_Lectures/Lec3 时序逻辑/","2026/03/08/Computer Organization/CO_Lectures/Lec2 组合逻辑/","2026/03/08/Computer Organization/CO_Lectures/Lec1 概述/","2026/02/20/故事一则/","2026/02/15/human-civilization-end-md/","2026/02/01/hello-world/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>
