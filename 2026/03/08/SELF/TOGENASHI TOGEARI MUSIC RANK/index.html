@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>TOGENASHI TOGEARI MUSIC RANK | Animus's Blog</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/pwa/favicon.png"><link rel="stylesheet" href="/css/index.css?v=3.0.21"><link rel="canonical" href="https://aln0m1.github.io/2026/03/08/SELF/TOGENASHI%20TOGEARI%20MUSIC%20RANK/index.html"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- Feature-specific CSS--><!-- aplayer--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><!-- fancybox ui--><!-- katex--><!-- Open Graph--><meta name="description" content="Rank1 爆ぜて咲く 爆裂绽放 Bleeding HeartsRank2 雑踏、僕らの街 熙熙攘攘，我们的城市 Wrong WorldRank3 空白とカタルシス 空白与净化 Emptiness and CatharsisRank3.5 Heavenly MeRank4 理"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="Animus's Blog"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.png"><link rel="apple-touch-icon" href="/img/pwa/favicon.png" sizes="180x180"><script>console.log(' %c Solitude %c ' + '3.0.21' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2023-04-20 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可"},
+    aside: {
+        state: {
+            morning: "✨ 早上好，新的一天开始了",
+            noon: "🍲 午餐时间",
+            afternoon: "🌞 下午好",
+            night: "早点休息",
+            goodnight: "晚安 😴",
+        },
+        witty_words: [],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: false,
+    lightbox: 'null',
+    right_menu: false,
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: false,
+    expire: false,
+};</script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: false,
+    ai_text: false,
+    color: false,
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body id="body"><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fas fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="item"><a href="/archives/2026/03/"><span class="date">2026/03</span><div class="count-group"><span class="count">35</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2026/02/"><span class="date">2026/02</span><div class="count-group"><span class="count">3</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/"><span class="date">全部文章</span><div class="count-group"><span class="count">38</span><span class="unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fas fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a href="/" title="返回博客主页" id="site-name"><span class="title">Solitude</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">TOGENASHI TOGEARI MUSIC RANK</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude fas fa-arrow-up"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/SELF/">SELF</a></span><div class="tag_share"><div class="post-meta__tag-list"></div></div></div></div><h1 class="post-title">TOGENASHI TOGEARI MUSIC RANK</h1><div id="post-meta"><div class="meta-secondline"></div></div></div><div class="post-radius-bottom"></div><article class="post-content article-container"><h1 id="Rank1-爆ぜて咲く-爆裂绽放-Bleeding-Hearts"><a href="#Rank1-爆ぜて咲く-爆裂绽放-Bleeding-Hearts" class="headerlink" title="Rank1 爆ぜて咲く   爆裂绽放   Bleeding Hearts"></a>Rank1 爆ぜて咲く   爆裂绽放   Bleeding Hearts</h1><h1 id="Rank2-雑踏、僕らの街-熙熙攘攘，我们的城市-Wrong-World"><a href="#Rank2-雑踏、僕らの街-熙熙攘攘，我们的城市-Wrong-World" class="headerlink" title="Rank2 雑踏、僕らの街   熙熙攘攘，我们的城市   Wrong World"></a>Rank2 雑踏、僕らの街   熙熙攘攘，我们的城市   Wrong World</h1><h1 id="Rank3-空白とカタルシス-空白与净化-Emptiness-and-Catharsis"><a href="#Rank3-空白とカタルシス-空白与净化-Emptiness-and-Catharsis" class="headerlink" title="Rank3 空白とカタルシス   空白与净化   Emptiness and Catharsis"></a>Rank3 空白とカタルシス   空白与净化   Emptiness and Catharsis</h1><h2 id="Rank3-5-Heavenly-Me"><a href="#Rank3-5-Heavenly-Me" class="headerlink" title="Rank3.5 Heavenly Me"></a>Rank3.5 Heavenly Me</h2><h1 id="Rank4-理想的パラドクスとは-所谓理想悖论-Ideal-Paradox"><a href="#Rank4-理想的パラドクスとは-所谓理想悖论-Ideal-Paradox" class="headerlink" title="Rank4 理想的パラドクスとは   所谓理想悖论   Ideal Paradox"></a>Rank4 理想的パラドクスとは   所谓理想悖论   Ideal Paradox</h1><h1 id="Rank5-傷つき傷つけ痛くて辛い-互相伤害-痛苦交加-Hurtful-Painful"><a href="#Rank5-傷つき傷つけ痛くて辛い-互相伤害-痛苦交加-Hurtful-Painful" class="headerlink" title="Rank5 傷つき傷つけ痛くて辛い   互相伤害 痛苦交加   Hurtful &amp; Painful"></a>Rank5 傷つき傷つけ痛くて辛い   互相伤害 痛苦交加   Hurtful &amp; Painful</h1><h1 id="Rank6-空の箱-空之箱-Void"><a href="#Rank6-空の箱-空之箱-Void" class="headerlink" title="Rank6 空の箱   空之箱   Void"></a>Rank6 空の箱   空之箱   Void</h1><h1 id="Rank7-極私的極彩色アンサー-极具自我色彩的回答-Answer-to-Extreme"><a href="#Rank7-極私的極彩色アンサー-极具自我色彩的回答-Answer-to-Extreme" class="headerlink" title="Rank7 極私的極彩色アンサー   极具自我色彩的回答   Answer to Extreme"></a>Rank7 極私的極彩色アンサー   极具自我色彩的回答   Answer to Extreme</h1><h1 id="Rank8-視界の隅-朽ちる音-视野一隅-腐朽之音-What-to-Raise"><a href="#Rank8-視界の隅-朽ちる音-视野一隅-腐朽之音-What-to-Raise" class="headerlink" title="Rank8 視界の隅 朽ちる音   视野一隅 腐朽之音   What to Raise"></a>Rank8 視界の隅 朽ちる音   视野一隅 腐朽之音   What to Raise</h1><h1 id="Rank9-運命の華-命运之花-I’m-Here"><a href="#Rank9-運命の華-命运之花-I’m-Here" class="headerlink" title="Rank9 運命の華   命运之花   I’m Here"></a>Rank9 運命の華   命运之花   I’m Here</h1><h1 id="Rank10-誰にもなれない私だから-正是因为无法成为他人的我-I’m-Nobody"><a href="#Rank10-誰にもなれない私だから-正是因为无法成为他人的我-I’m-Nobody" class="headerlink" title="Rank10 誰にもなれない私だから   正是因为无法成为他人的我   I’m Nobody"></a>Rank10 誰にもなれない私だから   正是因为无法成为他人的我   I’m Nobody</h1><h1 id="Rank11-碧いif-若是蔚蓝-What-If"><a href="#Rank11-碧いif-若是蔚蓝-What-If" class="headerlink" title="Rank11 碧いif   若是蔚蓝   What If"></a>Rank11 碧いif   若是蔚蓝   What If</h1><h1 id="Rank12-黎明を穿つ-击穿黎明-Piercing-the-Dawn-of-Time"><a href="#Rank12-黎明を穿つ-击穿黎明-Piercing-the-Dawn-of-Time" class="headerlink" title="Rank12 黎明を穿つ   击穿黎明   Piercing the Dawn of Time"></a>Rank12 黎明を穿つ   击穿黎明   Piercing the Dawn of Time</h1><h1 id="Rank13-サヨナラサヨナラサヨナラ-再见、再见、再见-Underneath"><a href="#Rank13-サヨナラサヨナラサヨナラ-再见、再见、再见-Underneath" class="headerlink" title="Rank13 サヨナラサヨナラサヨナラ   再见、再见、再见   Underneath"></a>Rank13 サヨナラサヨナラサヨナラ   再见、再见、再见   Underneath</h1><h1 id="Rank14-ダレモ-无论是谁-Nobody"><a href="#Rank14-ダレモ-无论是谁-Nobody" class="headerlink" title="Rank14 ダレモ   无论是谁   Nobody"></a>Rank14 ダレモ   无论是谁   Nobody</h1><h1 id="Rank15-Arrow"><a href="#Rank15-Arrow" class="headerlink" title="Rank15 Arrow"></a>Rank15 Arrow</h1><h1 id="Rank16-偽りの理-虚伪之理-No-Rhyme-Nor-Reason"><a href="#Rank16-偽りの理-虚伪之理-No-Rhyme-Nor-Reason" class="headerlink" title="Rank16 偽りの理   虚伪之理   No Rhyme Nor Reason"></a>Rank16 偽りの理   虚伪之理   No Rhyme Nor Reason</h1><h1 id="Rank17-運命に賭けたい論理-堵上命运的理论-Lonely-Fate-to-be-Destined"><a href="#Rank17-運命に賭けたい論理-堵上命运的理论-Lonely-Fate-to-be-Destined" class="headerlink" title="Rank17 運命に賭けたい論理   堵上命运的理论   Lonely Fate to be Destined"></a>Rank17 運命に賭けたい論理   堵上命运的理论   Lonely Fate to be Destined</h1><h1 id="Rank18-最期の禱り-最后的祈祷-White-Lie"><a href="#Rank18-最期の禱り-最后的祈祷-White-Lie" class="headerlink" title="Rank18 最期の禱り   最后的祈祷   White Lie"></a>Rank18 最期の禱り   最后的祈祷   White Lie</h1><h1 id="Rank19-無知のち私-知晓无知的我-Me-Renewed"><a href="#Rank19-無知のち私-知晓无知的我-Me-Renewed" class="headerlink" title="Rank19 無知のち私   知晓无知的我   Me Renewed"></a>Rank19 無知のち私   知晓无知的我   Me Renewed</h1><h1 id="Rank20-声なき魚-无声之鱼-Voiceless-Fish"><a href="#Rank20-声なき魚-无声之鱼-Voiceless-Fish" class="headerlink" title="Rank20 声なき魚   无声之鱼   Voiceless Fish"></a>Rank20 声なき魚   无声之鱼   Voiceless Fish</h1><h1 id="Rank21-名もなき何もかも-皆无其名-Nameless-Name"><a href="#Rank21-名もなき何もかも-皆无其名-Nameless-Name" class="headerlink" title="Rank21 名もなき何もかも   皆无其名   Nameless Name"></a>Rank21 名もなき何もかも   皆无其名   Nameless Name</h1><h1 id="Rank22-心象的フラクタル-心象分形-Mind-Playing-Fractal"><a href="#Rank22-心象的フラクタル-心象分形-Mind-Playing-Fractal" class="headerlink" title="Rank22 心象的フラクタル   心象分形   Mind Playing Fractal"></a>Rank22 心象的フラクタル   心象分形   Mind Playing Fractal</h1><h1 id="Rank23-生きて生きてゆく-活着、活下去-Creep"><a href="#Rank23-生きて生きてゆく-活着、活下去-Creep" class="headerlink" title="Rank23 生きて生きてゆく   活着、活下去   Creep"></a>Rank23 生きて生きてゆく   活着、活下去   Creep</h1><h1 id="Rank24-闇に溶けてく-溶于黑暗-Melt-Into-Darkness"><a href="#Rank24-闇に溶けてく-溶于黑暗-Melt-Into-Darkness" class="headerlink" title="Rank24 闇に溶けてく   溶于黑暗   Melt Into Darkness"></a>Rank24 闇に溶けてく   溶于黑暗   Melt Into Darkness</h1><h1 id="Rank25-吹き消した灯火-吹灭的灯火-Puff-of-Smoke"><a href="#Rank25-吹き消した灯火-吹灭的灯火-Puff-of-Smoke" class="headerlink" title="Rank25 吹き消した灯火   吹灭的灯火   Puff of Smoke"></a>Rank25 吹き消した灯火   吹灭的灯火   Puff of Smoke</h1><h1 id="Rank26-渇く、憂う-渴望，忧郁-Thirsty-Anxiety"><a href="#Rank26-渇く、憂う-渴望，忧郁-Thirsty-Anxiety" class="headerlink" title="Rank26 渇く、憂う   渴望，忧郁   Thirsty, Anxiety"></a>Rank26 渇く、憂う   渴望，忧郁   Thirsty, Anxiety</h1><h1 id="Rank27-気鬱、白濁す-忧郁、白浊-White-Drizzle-in-Gloom"><a href="#Rank27-気鬱、白濁す-忧郁、白浊-White-Drizzle-in-Gloom" class="headerlink" title="Rank27 気鬱、白濁す   忧郁、白浊   White Drizzle in Gloom"></a>Rank27 気鬱、白濁す   忧郁、白浊   White Drizzle in Gloom</h1><h1 id="Rank28-蝶に結いた赤い糸-系蝶红线-Meant-To-Be"><a href="#Rank28-蝶に結いた赤い糸-系蝶红线-Meant-To-Be" class="headerlink" title="Rank28 蝶に結いた赤い糸   系蝶红线   Meant To Be"></a>Rank28 蝶に結いた赤い糸   系蝶红线   Meant To Be</h1><h1 id="Rank29-もう何もいらない未来-再无所求的未来-Against-All-Answer"><a href="#Rank29-もう何もいらない未来-再无所求的未来-Against-All-Answer" class="headerlink" title="Rank29 もう何もいらない未来   再无所求的未来   Against All Answer"></a>Rank29 もう何もいらない未来   再无所求的未来   Against All Answer</h1><h1 id="Rank30-命をくれよ-请赐我以生命-Give-Me-Life"><a href="#Rank30-命をくれよ-请赐我以生命-Give-Me-Life" class="headerlink" title="Rank30 命をくれよ   请赐我以生命   Give Me Life"></a>Rank30 命をくれよ   请赐我以生命   Give Me Life</h1><h1 id="Rank31-荊の薔薇-荆棘蔷薇-Roses-in-Thorns"><a href="#Rank31-荊の薔薇-荆棘蔷薇-Roses-in-Thorns" class="headerlink" title="Rank31 荊の薔薇   荆棘蔷薇   Roses in Thorns"></a>Rank31 荊の薔薇   荆棘蔷薇   Roses in Thorns</h1><h1 id="Rank3-臆病な白夜-怯懦的白夜-Drowin-Loneliness"><a href="#Rank3-臆病な白夜-怯懦的白夜-Drowin-Loneliness" class="headerlink" title="Rank3 臆病な白夜   怯懦的白夜   Drowin Loneliness"></a>Rank3 臆病な白夜   怯懦的白夜   Drowin Loneliness</h1><h1 id="Rank33-飛べない蝶は夢を見る-不会飞的蝴蝶也会做梦-Belle-Papillon"><a href="#Rank33-飛べない蝶は夢を見る-不会飞的蝴蝶也会做梦-Belle-Papillon" class="headerlink" title="Rank33 飛べない蝶は夢を見る   不会飞的蝴蝶也会做梦   Belle Papillon"></a>Rank33 飛べない蝶は夢を見る   不会飞的蝴蝶也会做梦   Belle Papillon</h1><h1 id="Rank34-蜃気楼ニ問フ-心之蜃境-Mirage-of-Mind"><a href="#Rank34-蜃気楼ニ問フ-心之蜃境-Mirage-of-Mind" class="headerlink" title="Rank34 蜃気楼ニ問フ   心之蜃境   Mirage of Mind"></a>Rank34 蜃気楼ニ問フ   心之蜃境   Mirage of Mind</h1><h1 id="Rank35-薄采ディスプレイ-淡彩展示-Fragile-Violet"><a href="#Rank35-薄采ディスプレイ-淡彩展示-Fragile-Violet" class="headerlink" title="Rank35 薄采ディスプレイ   淡彩展示   Fragile Violet"></a>Rank35 薄采ディスプレイ   淡彩展示   Fragile Violet</h1></article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src="/img/logo.png"></div><div class="post-copyright__author_name">Animus</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">Animus's Blog</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2026/03/08/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6/Chapter1%20%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6%E5%AF%BC%E8%AE%BA/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Chapter1 进化心理学导论</div></div></a></div><div class="next-post pull-right"><a href="/2026/03/08/%E8%BF%9B%E5%8C%96%E5%BF%83%E7%90%86%E5%AD%A6/Chapter2%20%E8%BF%9B%E5%8C%96%E7%9A%84%E6%B3%95%E5%88%99/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Chapter2 进化的法则</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="/img/logo.png"></div><div class="description"></div><div class="bottom-group"><span class="left"><div class="name">Animus</div><div class="desc">一切并非无法改变，伸出手吧。</div></span><div class="social-icons is-center"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank1-%E7%88%86%E3%81%9C%E3%81%A6%E5%92%B2%E3%81%8F-%E7%88%86%E8%A3%82%E7%BB%BD%E6%94%BE-Bleeding-Hearts"><span class="toc-text">Rank1 爆ぜて咲く   爆裂绽放   Bleeding Hearts</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank2-%E9%9B%91%E8%B8%8F%E3%80%81%E5%83%95%E3%82%89%E3%81%AE%E8%A1%97-%E7%86%99%E7%86%99%E6%94%98%E6%94%98%EF%BC%8C%E6%88%91%E4%BB%AC%E7%9A%84%E5%9F%8E%E5%B8%82-Wrong-World"><span class="toc-text">Rank2 雑踏、僕らの街   熙熙攘攘，我们的城市   Wrong World</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank3-%E7%A9%BA%E7%99%BD%E3%81%A8%E3%82%AB%E3%82%BF%E3%83%AB%E3%82%B7%E3%82%B9-%E7%A9%BA%E7%99%BD%E4%B8%8E%E5%87%80%E5%8C%96-Emptiness-and-Catharsis"><span class="toc-text">Rank3 空白とカタルシス   空白与净化   Emptiness and Catharsis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Rank3-5-Heavenly-Me"><span class="toc-text">Rank3.5 Heavenly Me</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank4-%E7%90%86%E6%83%B3%E7%9A%84%E3%83%91%E3%83%A9%E3%83%89%E3%82%AF%E3%82%B9%E3%81%A8%E3%81%AF-%E6%89%80%E8%B0%93%E7%90%86%E6%83%B3%E6%82%96%E8%AE%BA-Ideal-Paradox"><span class="toc-text">Rank4 理想的パラドクスとは   所谓理想悖论   Ideal Paradox</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank5-%E5%82%B7%E3%81%A4%E3%81%8D%E5%82%B7%E3%81%A4%E3%81%91%E7%97%9B%E3%81%8F%E3%81%A6%E8%BE%9B%E3%81%84-%E4%BA%92%E7%9B%B8%E4%BC%A4%E5%AE%B3-%E7%97%9B%E8%8B%A6%E4%BA%A4%E5%8A%A0-Hurtful-Painful"><span class="toc-text">Rank5 傷つき傷つけ痛くて辛い   互相伤害 痛苦交加   Hurtful &amp; Painful</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank6-%E7%A9%BA%E3%81%AE%E7%AE%B1-%E7%A9%BA%E4%B9%8B%E7%AE%B1-Void"><span class="toc-text">Rank6 空の箱   空之箱   Void</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank7-%E6%A5%B5%E7%A7%81%E7%9A%84%E6%A5%B5%E5%BD%A9%E8%89%B2%E3%82%A2%E3%83%B3%E3%82%B5%E3%83%BC-%E6%9E%81%E5%85%B7%E8%87%AA%E6%88%91%E8%89%B2%E5%BD%A9%E7%9A%84%E5%9B%9E%E7%AD%94-Answer-to-Extreme"><span class="toc-text">Rank7 極私的極彩色アンサー   极具自我色彩的回答   Answer to Extreme</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank8-%E8%A6%96%E7%95%8C%E3%81%AE%E9%9A%85-%E6%9C%BD%E3%81%A1%E3%82%8B%E9%9F%B3-%E8%A7%86%E9%87%8E%E4%B8%80%E9%9A%85-%E8%85%90%E6%9C%BD%E4%B9%8B%E9%9F%B3-What-to-Raise"><span class="toc-text">Rank8 視界の隅 朽ちる音   视野一隅 腐朽之音   What to Raise</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank9-%E9%81%8B%E5%91%BD%E3%81%AE%E8%8F%AF-%E5%91%BD%E8%BF%90%E4%B9%8B%E8%8A%B1-I%E2%80%99m-Here"><span class="toc-text">Rank9 運命の華   命运之花   I’m Here</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank10-%E8%AA%B0%E3%81%AB%E3%82%82%E3%81%AA%E3%82%8C%E3%81%AA%E3%81%84%E7%A7%81%E3%81%A0%E3%81%8B%E3%82%89-%E6%AD%A3%E6%98%AF%E5%9B%A0%E4%B8%BA%E6%97%A0%E6%B3%95%E6%88%90%E4%B8%BA%E4%BB%96%E4%BA%BA%E7%9A%84%E6%88%91-I%E2%80%99m-Nobody"><span class="toc-text">Rank10 誰にもなれない私だから   正是因为无法成为他人的我   I’m Nobody</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank11-%E7%A2%A7%E3%81%84if-%E8%8B%A5%E6%98%AF%E8%94%9A%E8%93%9D-What-If"><span class="toc-text">Rank11 碧いif   若是蔚蓝   What If</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank12-%E9%BB%8E%E6%98%8E%E3%82%92%E7%A9%BF%E3%81%A4-%E5%87%BB%E7%A9%BF%E9%BB%8E%E6%98%8E-Piercing-the-Dawn-of-Time"><span class="toc-text">Rank12 黎明を穿つ   击穿黎明   Piercing the Dawn of Time</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank13-%E3%82%B5%E3%83%A8%E3%83%8A%E3%83%A9%E3%82%B5%E3%83%A8%E3%83%8A%E3%83%A9%E3%82%B5%E3%83%A8%E3%83%8A%E3%83%A9-%E5%86%8D%E8%A7%81%E3%80%81%E5%86%8D%E8%A7%81%E3%80%81%E5%86%8D%E8%A7%81-Underneath"><span class="toc-text">Rank13 サヨナラサヨナラサヨナラ   再见、再见、再见   Underneath</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank14-%E3%83%80%E3%83%AC%E3%83%A2-%E6%97%A0%E8%AE%BA%E6%98%AF%E8%B0%81-Nobody"><span class="toc-text">Rank14 ダレモ   无论是谁   Nobody</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank15-Arrow"><span class="toc-text">Rank15 Arrow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank16-%E5%81%BD%E3%82%8A%E3%81%AE%E7%90%86-%E8%99%9A%E4%BC%AA%E4%B9%8B%E7%90%86-No-Rhyme-Nor-Reason"><span class="toc-text">Rank16 偽りの理   虚伪之理   No Rhyme Nor Reason</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank17-%E9%81%8B%E5%91%BD%E3%81%AB%E8%B3%AD%E3%81%91%E3%81%9F%E3%81%84%E8%AB%96%E7%90%86-%E5%A0%B5%E4%B8%8A%E5%91%BD%E8%BF%90%E7%9A%84%E7%90%86%E8%AE%BA-Lonely-Fate-to-be-Destined"><span class="toc-text">Rank17 運命に賭けたい論理   堵上命运的理论   Lonely Fate to be Destined</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank18-%E6%9C%80%E6%9C%9F%E3%81%AE%E7%A6%B1%E3%82%8A-%E6%9C%80%E5%90%8E%E7%9A%84%E7%A5%88%E7%A5%B7-White-Lie"><span class="toc-text">Rank18 最期の禱り   最后的祈祷   White Lie</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank19-%E7%84%A1%E7%9F%A5%E3%81%AE%E3%81%A1%E7%A7%81-%E7%9F%A5%E6%99%93%E6%97%A0%E7%9F%A5%E7%9A%84%E6%88%91-Me-Renewed"><span class="toc-text">Rank19 無知のち私   知晓无知的我   Me Renewed</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank20-%E5%A3%B0%E3%81%AA%E3%81%8D%E9%AD%9A-%E6%97%A0%E5%A3%B0%E4%B9%8B%E9%B1%BC-Voiceless-Fish"><span class="toc-text">Rank20 声なき魚   无声之鱼   Voiceless Fish</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank21-%E5%90%8D%E3%82%82%E3%81%AA%E3%81%8D%E4%BD%95%E3%82%82%E3%81%8B%E3%82%82-%E7%9A%86%E6%97%A0%E5%85%B6%E5%90%8D-Nameless-Name"><span class="toc-text">Rank21 名もなき何もかも   皆无其名   Nameless Name</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank22-%E5%BF%83%E8%B1%A1%E7%9A%84%E3%83%95%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%AB-%E5%BF%83%E8%B1%A1%E5%88%86%E5%BD%A2-Mind-Playing-Fractal"><span class="toc-text">Rank22 心象的フラクタル   心象分形   Mind Playing Fractal</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank23-%E7%94%9F%E3%81%8D%E3%81%A6%E7%94%9F%E3%81%8D%E3%81%A6%E3%82%86%E3%81%8F-%E6%B4%BB%E7%9D%80%E3%80%81%E6%B4%BB%E4%B8%8B%E5%8E%BB-Creep"><span class="toc-text">Rank23 生きて生きてゆく   活着、活下去   Creep</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank24-%E9%97%87%E3%81%AB%E6%BA%B6%E3%81%91%E3%81%A6%E3%81%8F-%E6%BA%B6%E4%BA%8E%E9%BB%91%E6%9A%97-Melt-Into-Darkness"><span class="toc-text">Rank24 闇に溶けてく   溶于黑暗   Melt Into Darkness</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank25-%E5%90%B9%E3%81%8D%E6%B6%88%E3%81%97%E3%81%9F%E7%81%AF%E7%81%AB-%E5%90%B9%E7%81%AD%E7%9A%84%E7%81%AF%E7%81%AB-Puff-of-Smoke"><span class="toc-text">Rank25 吹き消した灯火   吹灭的灯火   Puff of Smoke</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank26-%E6%B8%87%E3%81%8F%E3%80%81%E6%86%82%E3%81%86-%E6%B8%B4%E6%9C%9B%EF%BC%8C%E5%BF%A7%E9%83%81-Thirsty-Anxiety"><span class="toc-text">Rank26 渇く、憂う   渴望，忧郁   Thirsty, Anxiety</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank27-%E6%B0%97%E9%AC%B1%E3%80%81%E7%99%BD%E6%BF%81%E3%81%99-%E5%BF%A7%E9%83%81%E3%80%81%E7%99%BD%E6%B5%8A-White-Drizzle-in-Gloom"><span class="toc-text">Rank27 気鬱、白濁す   忧郁、白浊   White Drizzle in Gloom</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank28-%E8%9D%B6%E3%81%AB%E7%B5%90%E3%81%84%E3%81%9F%E8%B5%A4%E3%81%84%E7%B3%B8-%E7%B3%BB%E8%9D%B6%E7%BA%A2%E7%BA%BF-Meant-To-Be"><span class="toc-text">Rank28 蝶に結いた赤い糸   系蝶红线   Meant To Be</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank29-%E3%82%82%E3%81%86%E4%BD%95%E3%82%82%E3%81%84%E3%82%89%E3%81%AA%E3%81%84%E6%9C%AA%E6%9D%A5-%E5%86%8D%E6%97%A0%E6%89%80%E6%B1%82%E7%9A%84%E6%9C%AA%E6%9D%A5-Against-All-Answer"><span class="toc-text">Rank29 もう何もいらない未来   再无所求的未来   Against All Answer</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank30-%E5%91%BD%E3%82%92%E3%81%8F%E3%82%8C%E3%82%88-%E8%AF%B7%E8%B5%90%E6%88%91%E4%BB%A5%E7%94%9F%E5%91%BD-Give-Me-Life"><span class="toc-text">Rank30 命をくれよ   请赐我以生命   Give Me Life</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank31-%E8%8D%8A%E3%81%AE%E8%96%94%E8%96%87-%E8%8D%86%E6%A3%98%E8%94%B7%E8%96%87-Roses-in-Thorns"><span class="toc-text">Rank31 荊の薔薇   荆棘蔷薇   Roses in Thorns</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank3-%E8%87%86%E7%97%85%E3%81%AA%E7%99%BD%E5%A4%9C-%E6%80%AF%E6%87%A6%E7%9A%84%E7%99%BD%E5%A4%9C-Drowin-Loneliness"><span class="toc-text">Rank3 臆病な白夜   怯懦的白夜   Drowin Loneliness</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank33-%E9%A3%9B%E3%81%B9%E3%81%AA%E3%81%84%E8%9D%B6%E3%81%AF%E5%A4%A2%E3%82%92%E8%A6%8B%E3%82%8B-%E4%B8%8D%E4%BC%9A%E9%A3%9E%E7%9A%84%E8%9D%B4%E8%9D%B6%E4%B9%9F%E4%BC%9A%E5%81%9A%E6%A2%A6-Belle-Papillon"><span class="toc-text">Rank33 飛べない蝶は夢を見る   不会飞的蝴蝶也会做梦   Belle Papillon</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank34-%E8%9C%83%E6%B0%97%E6%A5%BC%E3%83%8B%E5%95%8F%E3%83%95-%E5%BF%83%E4%B9%8B%E8%9C%83%E5%A2%83-Mirage-of-Mind"><span class="toc-text">Rank34 蜃気楼ニ問フ   心之蜃境   Mirage of Mind</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rank35-%E8%96%84%E9%87%87%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4-%E6%B7%A1%E5%BD%A9%E5%B1%95%E7%A4%BA-Fragile-Violet"><span class="toc-text">Rank35 薄采ディスプレイ   淡彩展示   Fragile Violet</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/2026/03/08/SELF/Animation/" title="Animation"><div class="content"><span class="title" href="/2026/03/08/SELF/Animation/" title="Animation">Animation</span><span class="categories" href="/2026/03/08/SELF/Animation/">SELF</span></div></a><a class="aside-list-item" href="/2026/03/08/Algorithm/%E5%89%8D%E7%BC%80%E5%92%8C/" title="前缀和"><div class="content"><span class="title" href="/2026/03/08/Algorithm/%E5%89%8D%E7%BC%80%E5%92%8C/" title="前缀和">前缀和</span><span class="categories" href="/2026/03/08/Algorithm/%E5%89%8D%E7%BC%80%E5%92%8C/">Algorithm</span></div></a><a class="aside-list-item" href="/2026/03/08/Algorithm/Floyd%E7%AE%97%E6%B3%95/" title="Floyd算法"><div class="content"><span class="title" href="/2026/03/08/Algorithm/Floyd%E7%AE%97%E6%B3%95/" title="Floyd算法">Floyd算法</span><span class="categories" href="/2026/03/08/Algorithm/Floyd%E7%AE%97%E6%B3%95/">Algorithm</span></div></a><a class="aside-list-item" href="/2026/03/08/Algorithm/%E5%88%86%E6%B2%BB/" title="分治"><div class="content"><span class="title" href="/2026/03/08/Algorithm/%E5%88%86%E6%B2%BB/" title="分治">分治</span><span class="categories" href="/2026/03/08/Algorithm/%E5%88%86%E6%B2%BB/">Algorithm</span></div></a><a class="aside-list-item" href="/2026/03/08/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%92%8C%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/" title="动态规划和记忆化搜索"><div class="content"><span class="title" href="/2026/03/08/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%92%8C%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/" title="动态规划和记忆化搜索">动态规划和记忆化搜索</span><span class="categories" href="/2026/03/08/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%92%8C%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/">Algorithm</span></div></a></div></div></div></div></main><footer id="footer"><div id="st-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2023 - 2026 By<a class="footer-bar-link" href="/" title="Animus">Animus</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/" title="框架：Hexo">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="主题：Solitude">主题：Solitude</a></div></div><div class="footer-bar-right"></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><div><!-- Critical scripts loaded synchronously--><script src="/js/utils.js?v=3.0.21"></script><script src="/js/main.js?v=3.0.21"></script><!-- Non-critical scripts loaded asynchronously--><script async src="/js/third_party/waterfall.min.js?v=3.0.21"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><!-- Feature-specific scripts loaded asynchronously--><script defer src="/js/tw_cn.js?v=3.0.21"></script><!-- UI enhancement scripts--><script defer src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><!-- Music player scripts--><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><!-- Cover color processing scripts--><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!-- Search functionality--><!-- Right menu functionality--><div class="js-pjax"></div></div><!-- pjax--><script>let pjax = null;
+
+function initPjax() {
+    if (typeof Pjax === 'undefined') {
+        console.warn('Pjax is not loaded yet, retrying...');
+        setTimeout(initPjax, 100);
+        return;
+    }
+
+    pjax = new Pjax({
+        elements: 'a:not([target="_blank"])',
+        selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+        cacheBust: false,
+        analytics: false,
+        scrollRestoration: false
+    })
+
+    // 将 pjax 实例挂载到全局
+    window.pjax = pjax;
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    document.addEventListener('pjax:complete', () => {
+        window.refreshFn()
+
+        document.querySelectorAll('script[data-pjax]').forEach(item => {
+            const newScript = document.createElement('script')
+            const content = item.text || item.textContent || item.innerHTML || ""
+            Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+            newScript.appendChild(document.createTextNode(content))
+            item.parentNode.replaceChild(newScript, item)
+        })
+
+        GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+    })
+
+    document.addEventListener('pjax:error', (e) => {
+        if (e.request.status === 404) {
+            pjax.loadUrl('/404.html')
+        }
+    })
+}
+
+// 初始化 Pjax
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPjax);
+} else {
+    initPjax();
+}</script><!-- google adsense--></body></html>
+        <script>
+            const posts = ["2026/03/08/SELF/Animation/","2026/03/08/Algorithm/前缀和/","2026/03/08/Algorithm/Floyd算法/","2026/03/08/Algorithm/分治/","2026/03/08/Algorithm/动态规划和记忆化搜索/","2026/03/08/Algorithm/线性方程组思想/","2026/03/08/Algorithm/模运算和费马小定理/","2026/03/08/Python/学习Kaggle Python教程的记录/","2026/03/08/Scary/惊悚类文艺作品的分类研究（未完待续）/","2026/03/08/进化心理学/Chapter1 进化心理学导论/","2026/03/08/SELF/TOGENASHI TOGEARI MUSIC RANK/","2026/03/08/进化心理学/Chapter2 进化的法则/","2026/03/08/Templates/我的模版/","2026/03/08/Operating System/Lec 1/","2026/03/08/Object-Oriented Programming/OO_Lectures/Lec3/","2026/03/08/Object-Oriented Programming/OO_Lectures/Lec1-2/","2026/03/08/Machine Learning/Chapter 2. 机器学习中的线性代数、多变量线性回归/","2026/03/08/Machine Learning/Chapter 1. 监督学习、无监督学习、简单的回归/","2026/03/08/Computer Organization/VERILOG/编写可综合的Verilog代码/","2026/03/08/Computer Organization/VERILOG/Verilog工程开发、仿真、调试实例/","2026/03/08/Computer Organization/VERILOG/Verilog代码规范/","2026/03/08/Computer Organization/VERILOG/Verilog 语法 逻辑建模/","2026/03/08/Computer Organization/VERILOG/Verilog 语法 运算符/","2026/03/08/Computer Organization/VERILOG/Verilog 语法 端口、驱动与赋值/","2026/03/08/Computer Organization/VERILOG/Verilog 语法 有符号数的处理/","2026/03/08/Computer Organization/MIPS/MIPS题目/","2026/03/08/Computer Organization/CO实验文件/document/","2026/03/08/Computer Organization/CO_Lectures/Lec8 外部存储与输入输出/","2026/03/08/Computer Organization/CO_Lectures/Lec7 高速缓存与虚拟存储/","2026/03/08/Computer Organization/CO_Lectures/Lec6 MIPS处理器设计/","2026/03/08/Computer Organization/CO_Lectures/Lec5 指令系统/","2026/03/08/Computer Organization/CO_Lectures/Lec4 主存储器/","2026/03/08/Computer Organization/CO_Lectures/Lec3 时序逻辑/","2026/03/08/Computer Organization/CO_Lectures/Lec2 组合逻辑/","2026/03/08/Computer Organization/CO_Lectures/Lec1 概述/","2026/02/20/故事一则/","2026/02/15/human-civilization-end-md/","2026/02/01/hello-world/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>
